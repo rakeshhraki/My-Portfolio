@@ -1,0 +1,54 @@
+.footer {
+  width: 100%;
+  padding: 2.5rem 4rem;
+  background: #111111;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 10;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  color: #9A9A95;
+  letter-spacing: 0.12em;
+}
+
+.footer-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #F5F3EF;
+  letter-spacing: 0.05em;
+}
+
+.footer-pipe {
+  margin: 0 0.75rem;
+  color: rgba(163, 28, 27, 0.6);
+}
+
+.footer-role {
+  color: #9A9A95;
+}
+
+.footer-tagline {
+  color: rgba(154, 154, 149, 0.7);
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}

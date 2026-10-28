@@ -1,0 +1,488 @@
+/* ═══════════════════════════════════════════════════════
+   PROJECTS SECTION — Cinematic editorial project cards
+   ═══════════════════════════════════════════════════════ */
+
+.projects {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 140px 24px 120px;
+  overflow: hidden;
+}
+
+/* ── large background "04" ── */
+.projects__bg-number {
+  position: absolute;
+  top: 60px;
+  right: -20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(180px, 22vw, 320px);
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* ── header ── */
+.projects__header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 64px;
+}
+
+.projects__label {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #a31c1b;
+  margin-bottom: 16px;
+}
+
+.projects__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(40px, 6vw, 64px);
+  font-weight: 600;
+  color: #f5f3ef;
+  letter-spacing: 6px;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.projects__subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #9a9a95;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0;
+}
+
+.projects__divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(163, 28, 27, 0.5);
+  margin-top: 28px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FEATURED CARD — CyberLens (full-width)
+   ═══════════════════════════════════════════════════════ */
+
+.projects__featured {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 32px;
+}
+
+.project-featured {
+  position: relative;
+  background: rgba(23, 23, 23, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.project-featured:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(163, 28, 27, 0.06);
+}
+
+/* crimson accent */
+.project-featured__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a31c1b 0%, rgba(163, 28, 27, 0.15) 100%);
+}
+
+/* inner layout */
+.project-featured__inner {
+  display: flex;
+  gap: 48px;
+  padding: 52px 48px;
+  align-items: center;
+}
+
+/* text side */
+.project-featured__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-featured__badge {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #a31c1b;
+  background: rgba(163, 28, 27, 0.1);
+  border: 1px solid rgba(163, 28, 27, 0.2);
+  border-radius: 3px;
+  padding: 4px 12px;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.project-featured__number-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.project-featured__number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #a31c1b;
+  line-height: 1;
+}
+
+.project-featured__dash {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.project-featured__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  color: #f5f3ef;
+  letter-spacing: 6px;
+  margin: 0 0 10px;
+}
+
+.project-featured__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  color: #9a9a95;
+  margin: 0 0 18px;
+}
+
+.project-featured__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9a9a95;
+  line-height: 1.75;
+  margin: 0 0 24px;
+  max-width: 500px;
+}
+
+/* tech pills */
+.project-featured__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.project-featured__tech-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  color: #9a9a95;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 5px 14px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-featured:hover .project-featured__tech-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* CTA button */
+.project-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #f5f3ef;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 12px 24px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition:
+    background 0.35s ease,
+    border-color 0.35s ease,
+    color 0.35s ease;
+}
+
+.project-featured__cta:hover {
+  background: rgba(163, 28, 27, 0.15);
+  border-color: #a31c1b;
+  color: #a31c1b;
+}
+
+.project-featured__cta svg {
+  transition: transform 0.3s ease;
+}
+
+.project-featured__cta:hover svg {
+  transform: translateX(4px);
+}
+
+/* image placeholder */
+.project-featured__image {
+  flex: 0 0 420px;
+  max-width: 420px;
+}
+
+.project-featured__image-placeholder {
+  aspect-ratio: 16 / 10;
+  background: rgba(6, 17, 12, 0.4);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-featured:hover .project-featured__image-placeholder {
+  transform: scale(1.03);
+}
+
+.project-featured__image-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SECONDARY CARDS — 2-column grid
+   ═══════════════════════════════════════════════════════ */
+
+.projects__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  position: relative;
+  background: rgba(23, 23, 23, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  transition:
+    transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    border-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+}
+
+/* accent */
+.project-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #a31c1b 0%, rgba(163, 28, 27, 0.15) 100%);
+}
+
+/* image placeholder */
+.project-card__image {
+  padding: 24px 24px 0;
+}
+
+.project-card__image-placeholder {
+  aspect-ratio: 16 / 9;
+  background: rgba(6, 17, 12, 0.35);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.project-card:hover .project-card__image-placeholder {
+  transform: scale(1.04);
+}
+
+.project-card__image-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.18);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* body */
+.project-card__body {
+  padding: 28px 28px 32px;
+}
+
+.project-card__number-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.project-card__number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #a31c1b;
+  line-height: 1;
+}
+
+.project-card__dash {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.12);
+}
+
+.project-card__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #f5f3ef;
+  letter-spacing: 4px;
+  margin: 0 0 6px;
+}
+
+.project-card__tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  font-style: italic;
+  color: #9a9a95;
+  margin: 0 0 14px;
+}
+
+.project-card__desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #9a9a95;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+/* tech pills */
+.project-card__tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-card__tech-pill {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #9a9a95;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 4px 12px;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover .project-card__tech-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+
+@media (max-width: 960px) {
+  .project-featured__inner {
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 32px;
+  }
+
+  .project-featured__image {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 860px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .projects {
+    padding: 100px 20px 80px;
+  }
+
+  .projects__bg-number {
+    font-size: 160px;
+    right: -10px;
+    top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    padding: 80px 16px 64px;
+  }
+
+  .project-featured__inner {
+    padding: 32px 20px;
+  }
+
+  .project-card__body {
+    padding: 22px 20px 28px;
+  }
+
+  .project-card__image {
+    padding: 16px 16px 0;
+  }
+
+  .projects__title {
+    letter-spacing: 4px;
+  }
+
+  .projects__bg-number {
+    font-size: 120px;
+  }
+}

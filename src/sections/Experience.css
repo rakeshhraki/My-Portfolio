@@ -1,0 +1,217 @@
+.experience-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #06110C;
+  overflow: hidden;
+}
+
+.experience-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.experience-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.experience-section-number {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #A31C1B;
+  margin-bottom: 16px;
+}
+
+.experience-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #F5F3EF;
+  margin: 0;
+}
+
+.experience-title-divider {
+  width: 48px;
+  height: 1px;
+  background: #A31C1B;
+  margin: 24px auto 0;
+  opacity: 0.6;
+}
+
+/* Timeline */
+.experience-timeline {
+  position: relative;
+  padding-left: 48px;
+  min-height: 200px;
+}
+
+.experience-timeline-track {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.experience-timeline-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    180deg,
+    #A31C1B,
+    rgba(163, 28, 27, 0.3)
+  );
+}
+
+/* Dot */
+.experience-dot-wrapper {
+  position: absolute;
+  left: -42px;
+  top: 24px;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.experience-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #A31C1B;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-dot-ring {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #A31C1B;
+  z-index: 1;
+}
+
+/* Entry */
+.experience-entry {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+/* Card */
+.experience-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.4s ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.experience-card-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    #A31C1B,
+    rgba(163, 28, 27, 0.2)
+  );
+}
+
+.experience-card-content {
+  padding: 32px 32px 28px 28px;
+}
+
+.experience-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #F5F3EF;
+  margin: 0 0 10px 0;
+  letter-spacing: 0.02em;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.experience-card-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: #9A9A95;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  opacity: 0.7;
+}
+
+.experience-card-meta {
+  display: flex;
+  align-items: center;
+}
+
+.experience-dash {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  color: #9A9A95;
+  opacity: 0.3;
+}
+
+/* Footer Note */
+.experience-footer-note {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #9A9A95;
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 48px auto 0;
+}
+
+/* Section divider */
+.experience-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+}
+
+@media (max-width: 600px) {
+  .experience-timeline {
+    padding-left: 36px;
+  }
+
+  .experience-dot-wrapper {
+    left: -30px;
+  }
+
+  .experience-card-content {
+    padding: 24px 20px 20px 20px;
+  }
+}

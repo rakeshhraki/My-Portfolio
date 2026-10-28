@@ -1,0 +1,500 @@
+/* ============================================
+   About.css — Editorial About Section
+   ============================================ */
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #171717;
+  overflow: hidden;
+  padding: 8rem 0;
+}
+
+/* ── Ambient gradients ── */
+.aboutBgGradient {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 80% 30%, rgba(6, 17, 12, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 50% at 10% 70%, rgba(163, 28, 27, 0.03) 0%, transparent 60%);
+}
+
+/* ── Decorative grid lines ── */
+.aboutGridLines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.aboutGridLines::before {
+  content: '';
+  position: absolute;
+  left: 8%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.03) 20%, rgba(255,255,255,0.03) 80%, transparent);
+}
+
+.aboutGridLines::after {
+  content: '';
+  position: absolute;
+  right: 8%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.03) 20%, rgba(255,255,255,0.03) 80%, transparent);
+}
+
+/* ── Content wrapper ── */
+.aboutContent {
+  position: relative;
+  z-index: 5;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+/* ── Section header ── */
+.aboutHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+.aboutSectionNumber {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  color: #A31C1B;
+  letter-spacing: 0.1em;
+  padding-top: 1rem;
+  opacity: 0.7;
+}
+
+.aboutTitleWrapper {
+  position: relative;
+}
+
+.aboutTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 700;
+  color: #F5F3EF;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+}
+
+.aboutTitleLine {
+  display: block;
+  height: 3px;
+  width: 60px;
+  background: #A31C1B;
+  margin-top: 1.25rem;
+}
+
+/* ── Main grid: bio + portrait + education ── */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.9fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* ── Bio column ── */
+.aboutBio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutBioText {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: #9A9A95;
+  margin: 0;
+}
+
+.aboutBioText strong {
+  color: #F5F3EF;
+  font-weight: 600;
+}
+
+/* ── Interests tags ── */
+.aboutInterests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+}
+
+.aboutInterestTag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9A9A95;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 100px;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  cursor: default;
+}
+
+.aboutInterestTag:hover {
+  border-color: rgba(163, 28, 27, 0.4);
+  color: #F5F3EF;
+  background: rgba(163, 28, 27, 0.06);
+}
+
+/* ── Portrait composition ── */
+.aboutPortraitComposition {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutPortraitFrame {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 3 / 4;
+}
+
+/* Outer geometric frame lines */
+.aboutFrameOuter {
+  position: absolute;
+  inset: -16px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aboutFrameOuter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 60%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(245, 243, 239, 0.15), transparent);
+}
+
+.aboutFrameOuter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom, rgba(245, 243, 239, 0.15), transparent);
+}
+
+/* Inner geometric frame lines */
+.aboutFrameInner {
+  position: absolute;
+  inset: -16px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aboutFrameInner::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 60%;
+  height: 1px;
+  background: linear-gradient(to left, rgba(163, 28, 27, 0.35), transparent);
+}
+
+.aboutFrameInner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 60%;
+  width: 1px;
+  background: linear-gradient(to top, rgba(163, 28, 27, 0.35), transparent);
+}
+
+/* Corner decorations */
+.aboutFrameCornerTL {
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid rgba(245, 243, 239, 0.25);
+  border-left: 1px solid rgba(245, 243, 239, 0.25);
+  z-index: 2;
+}
+
+.aboutFrameCornerTR {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid rgba(245, 243, 239, 0.08);
+  border-right: 1px solid rgba(245, 243, 239, 0.08);
+  z-index: 2;
+}
+
+.aboutFrameCornerBL {
+  position: absolute;
+  bottom: -16px;
+  left: -16px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid rgba(245, 243, 239, 0.08);
+  border-left: 1px solid rgba(245, 243, 239, 0.08);
+  z-index: 2;
+}
+
+.aboutFrameCornerBR {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid rgba(163, 28, 27, 0.45);
+  border-right: 1px solid rgba(163, 28, 27, 0.45);
+  z-index: 2;
+}
+
+/* Forest green background tint */
+.aboutPortraitBgTint {
+  position: absolute;
+  inset: -6px;
+  background: rgba(6, 17, 12, 0.25);
+  z-index: 0;
+  border-radius: 2px;
+}
+
+/* Crimson accent edge line */
+.aboutPortraitAccentLine {
+  position: absolute;
+  left: -3px;
+  top: 15%;
+  bottom: 25%;
+  width: 3px;
+  background: linear-gradient(to bottom, transparent, #A31C1B 30%, #A31C1B 70%, transparent);
+  z-index: 5;
+  border-radius: 2px;
+}
+
+/* Image container */
+.aboutPortraitImageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.aboutPortraitImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: contrast(1.05) saturate(0.85) brightness(0.88);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), filter 0.7s ease;
+}
+
+.aboutPortraitFrame:hover .aboutPortraitImage {
+  transform: scale(1.03);
+  filter: contrast(1.1) saturate(0.95) brightness(0.92);
+}
+
+/* Gradient overlay on image */
+.aboutPortraitOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 17, 12, 0.1) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(23, 23, 23, 0.4) 100%
+  );
+}
+
+/* Signature below portrait */
+.aboutPortraitSignature {
+  margin-top: 2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(245, 243, 239, 0.4);
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.aboutPortraitSignatureLine {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: rgba(163, 28, 27, 0.3);
+  margin: 0.75rem auto 0;
+}
+
+/* ── Education column ── */
+.aboutEducation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutEducationLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9A9A95;
+  margin-bottom: 0.5rem;
+}
+
+.aboutEducationCard {
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.015);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.35s ease, background 0.35s ease;
+}
+
+.aboutEducationCard:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.aboutEducationCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: #A31C1B;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.aboutEducationCard:hover::before {
+  opacity: 1;
+}
+
+.aboutEducationDegree {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F5F3EF;
+  margin: 0 0 0.3rem;
+}
+
+.aboutEducationSchool {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  color: #9A9A95;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.aboutEducationBadge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  border: 1px solid rgba(163, 28, 27, 0.3);
+  color: #A31C1B;
+  background: rgba(163, 28, 27, 0.06);
+}
+
+.aboutEducationBadge.completed {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #9A9A95;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1100px) {
+  .aboutGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .aboutBio {
+    grid-column: 1 / -1;
+    order: 1;
+  }
+
+  .aboutPortraitComposition {
+    order: 2;
+  }
+
+  .aboutEducation {
+    order: 3;
+  }
+
+  .aboutContent {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 5rem 0;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .aboutPortraitComposition {
+    order: 2;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .aboutEducation {
+    order: 3;
+  }
+
+  .aboutHeader {
+    margin-bottom: 3rem;
+  }
+
+  .aboutContent {
+    padding: 0 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 4rem 0;
+  }
+
+  .aboutContent {
+    padding: 0 1rem;
+  }
+
+  .aboutPortraitFrame {
+    max-width: 280px;
+  }
+}

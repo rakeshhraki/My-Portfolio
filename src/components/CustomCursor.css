@@ -1,0 +1,63 @@
+/* ============================================
+   CustomCursor.css — Subtle Desktop Cursor
+   ============================================ */
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #F5F3EF;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  margin-top: -3px;
+  margin-left: -3px;
+  transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  will-change: transform;
+}
+
+.custom-cursor-dot--pointer {
+  background-color: #A31C1B;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  margin-left: -4px;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  margin-top: -17px;
+  margin-left: -17px;
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: transform;
+}
+
+.custom-cursor-ring--pointer {
+  width: 52px;
+  height: 52px;
+  margin-top: -26px;
+  margin-left: -26px;
+  border-color: rgba(163, 28, 27, 0.75);
+  background-color: rgba(163, 28, 27, 0.06);
+  box-shadow: 0 0 15px rgba(163, 28, 27, 0.25);
+}
+
+@media (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}

@@ -1,0 +1,131 @@
+.skills-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #171717;
+  overflow: hidden;
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.skills-header {
+  margin-bottom: 72px;
+}
+
+.skills-section-number {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #A31C1B;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+}
+
+.skills-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #F5F3EF;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px 64px;
+}
+
+.skills-category {
+  min-width: 0;
+}
+
+.skills-category-header {
+  margin-bottom: 24px;
+}
+
+.skills-category-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #F5F3EF;
+  letter-spacing: 0.15em;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.skills-category-line {
+  width: 32px;
+  height: 2px;
+  background-color: #A31C1B;
+  border-radius: 1px;
+}
+
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills-pill {
+  display: inline-block;
+  padding: 8px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #9A9A95;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 100px;
+  cursor: default;
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.skills-pill:hover {
+  color: #F5F3EF;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 80px 0;
+  }
+
+  .skills-container {
+    padding: 0 24px;
+  }
+
+  .skills-header {
+    margin-bottom: 48px;
+  }
+
+  .skills-title {
+    font-size: 2.5rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .skills-pill {
+    padding: 7px 16px;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-category-title {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,149 @@
+.resume-section {
+  position: relative;
+  padding: 160px 0;
+  background-color: #171717;
+  overflow: hidden;
+}
+
+.resume-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-section-number {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #A31C1B;
+  letter-spacing: 0.15em;
+  margin-bottom: 24px;
+}
+
+.resume-accent-line {
+  width: 48px;
+  height: 2px;
+  background-color: #A31C1B;
+  margin-bottom: 48px;
+  transform-origin: center;
+}
+
+.resume-heading {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #F5F3EF;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.resume-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #9A9A95;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 0 56px 0;
+  letter-spacing: 0.01em;
+}
+
+.resume-cta-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.resume-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 44px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #A31C1B;
+  background: transparent;
+  border: 1.5px solid #A31C1B;
+  border-radius: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.35s ease, color 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-cta-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #A31C1B;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 0;
+}
+
+.resume-cta-button:hover::before {
+  transform: scaleX(1);
+}
+
+.resume-cta-button:hover {
+  color: #F5F3EF;
+  box-shadow: 0 0 30px rgba(163, 28, 27, 0.25);
+}
+
+.resume-cta-button span,
+.resume-cta-button svg {
+  position: relative;
+  z-index: 1;
+}
+
+.resume-download-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ─── Responsive ─── */
+
+@media (max-width: 768px) {
+  .resume-section {
+    padding: 100px 0;
+  }
+
+  .resume-container {
+    padding: 0 24px;
+  }
+
+  .resume-heading {
+    font-size: 3rem;
+  }
+
+  .resume-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .resume-cta-button {
+    padding: 16px 36px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-heading {
+    font-size: 2.2rem;
+  }
+
+  .resume-cta-button {
+    padding: 14px 28px;
+    font-size: 0.75rem;
+    gap: 10px;
+  }
+}

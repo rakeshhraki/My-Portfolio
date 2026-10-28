@@ -1,0 +1,177 @@
+.labs-section {
+  position: relative;
+  padding: 120px 0;
+  background-color: #171717;
+  overflow: hidden;
+}
+
+.labs-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.labs-header {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.labs-section-number {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  color: #A31C1B;
+  margin-bottom: 16px;
+}
+
+.labs-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #F5F3EF;
+  margin: 0 0 16px 0;
+}
+
+.labs-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #9A9A95;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.labs-title-divider {
+  width: 48px;
+  height: 1px;
+  background: #A31C1B;
+  margin: 24px auto 0;
+  opacity: 0.6;
+}
+
+/* Grid */
+.labs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 768px) {
+  .labs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .labs-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+/* Card */
+.labs-card {
+  position: relative;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  cursor: default;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.labs-card:hover {
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 20px rgba(163, 28, 27, 0.05);
+}
+
+.labs-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 32px;
+  text-align: center;
+}
+
+.labs-card-icon {
+  color: #9A9A95;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+  opacity: 0.7;
+}
+
+.labs-card:hover .labs-card-icon {
+  color: #F5F3EF;
+  opacity: 0.9;
+}
+
+.labs-card-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: #F5F3EF;
+  margin: 0 0 16px 0;
+}
+
+.labs-card-divider {
+  width: 24px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
+
+.labs-card-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.labs-lock-icon {
+  color: #9A9A95;
+  opacity: 0.5;
+}
+
+.labs-coming-soon {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #9A9A95;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* Footer Note */
+.labs-footer-note {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: #9A9A95;
+  opacity: 0.7;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Section spacing */
+.labs-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.06),
+    transparent
+  );
+}
