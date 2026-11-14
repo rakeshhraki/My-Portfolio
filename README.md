@@ -1,4 +1,4 @@
-# RAKESH S. — Premium Cinematic Cybersecurity Portfolio
+# RAKESH S. —  Portfolio
 
 A bespoke, editorial cybersecurity portfolio built with **React 18**, **TypeScript**, **Framer Motion**, and **Vite**.
 
