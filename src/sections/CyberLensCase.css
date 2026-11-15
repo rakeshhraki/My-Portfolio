@@ -212,7 +212,7 @@
   margin: 0;
 }
 
-/* screenshot placeholder */
+/* screenshot */
 .cyberlens-section__screenshot {
   margin-top: 28px;
 }
@@ -220,13 +220,22 @@
 .cyberlens-section__screenshot-inner {
   width: 100%;
   aspect-ratio: 16 / 9;
-  background: rgba(6, 17, 12, 0.3);
-  border: 1px dashed rgba(255, 255, 255, 0.08);
+  background: rgba(6, 17, 12, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.cyberlens-section__screenshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
 }
 
 .cyberlens-section__screenshot-label {

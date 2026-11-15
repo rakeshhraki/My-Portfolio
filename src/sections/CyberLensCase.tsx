@@ -319,9 +319,12 @@ const CyberLensCase: React.FC<CyberLensCaseProps> = ({ isOpen, onClose }) => {
                     {section.hasScreenshot && (
                       <div className="cyberlens-section__screenshot">
                         <div className="cyberlens-section__screenshot-inner">
-                          <span className="cyberlens-section__screenshot-label">
-                            [Screenshot placeholder — Replace with actual CyberLens screenshots]
-                          </span>
+                          <img
+                            src="/project-cyberlens.jpg"
+                            alt="CyberLens Security Research Workbench Interface"
+                            className="cyberlens-section__screenshot-img"
+                            loading="lazy"
+                          />
                         </div>
                       </div>
                     )}

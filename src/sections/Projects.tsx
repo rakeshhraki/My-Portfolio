@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import CyberLensCase from './CyberLensCase';
+import SentinelMailCase from './SentinelMailCase';
 import './Projects.css';
 
 /* ── arrow icon ── */
@@ -27,6 +28,7 @@ interface ProjectData {
   tagline: string;
   description: string;
   technologies: string[];
+  image: string;
   featured?: boolean;
   label?: string;
 }
@@ -39,6 +41,7 @@ const projectsData: ProjectData[] = [
     description:
       'CyberLens is a defensive static file-analysis workbench designed to safely inspect suspicious files without executing them. It performs static analysis, file triage, risk assessment, and indicator extraction.',
     technologies: ['Technologies to be confirmed'],
+    image: '/project-cyberlens.jpg',
     featured: true,
     label: 'LATEST PROJECT',
   },
@@ -57,6 +60,7 @@ const projectsData: ProjectData[] = [
       'TP4056',
       'Telegram Bot',
     ],
+    image: '/project-smart-helmet.jpg',
   },
   {
     number: '03',
@@ -71,6 +75,26 @@ const projectsData: ProjectData[] = [
       'Pressure sensors',
       'Wokwi',
     ],
+    image: '/project-hydrosense.jpg',
+  },
+  {
+    number: '04',
+    title: 'SENTINELMAIL',
+    tagline: 'Security Mailbox Triage & Incident Response Platform',
+    description:
+      'A full-stack security operations platform engineered for suspicious email triage and incident response. Replaces ad-hoc inbox tracking with structured email intake, analyst triage queues, one-click incident escalation (INC-YYYY-NNNN), IOC extraction with confidence scoring, collaborative investigation notes, and multi-tier role-based access control.',
+    technologies: [
+      'React 19',
+      'Node.js',
+      'Express 5',
+      'MongoDB',
+      'JWT / RBAC',
+      'Tailwind CSS',
+      'Playwright',
+    ],
+    image: '/project-sentinelmail.jpg',
+    featured: true,
+    label: 'CYBERSECURITY',
   },
 ];
 
@@ -129,7 +153,9 @@ const Projects: React.FC = () => {
   const [caseStudyOpen, setCaseStudyOpen] = useState(false);
 
   const featured = projectsData[0];
-  const rest = projectsData.slice(1);
+  const rest = projectsData.slice(1, 3);
+  const sentinelProject = projectsData[3];
+  const [sentinelMailCaseOpen, setSentinelMailCaseOpen] = useState(false);
 
   return (
     <>
@@ -203,12 +229,15 @@ const Projects: React.FC = () => {
                 </button>
               </div>
 
-              {/* image placeholder */}
+              {/* image container */}
               <div className="project-featured__image">
-                <div className="project-featured__image-placeholder">
-                  <span className="project-featured__image-label">
-                    [CyberLens Screenshot — Replace with actual screenshot]
-                  </span>
+                <div className="project-featured__image-container">
+                  <img
+                    src={featured.image}
+                    alt={`${featured.title} — ${featured.tagline}`}
+                    className="project-featured__img"
+                    loading="lazy"
+                  />
                 </div>
               </div>
             </div>
@@ -231,12 +260,15 @@ const Projects: React.FC = () => {
               {/* accent */}
               <div className="project-card__accent" />
 
-              {/* image placeholder */}
+              {/* image container */}
               <div className="project-card__image">
-                <div className="project-card__image-placeholder">
-                  <span className="project-card__image-label">
-                    [{project.title} Screenshot — Replace with actual screenshot]
-                  </span>
+                <div className="project-card__image-container">
+                  <img
+                    src={project.image}
+                    alt={`${project.title} — ${project.tagline}`}
+                    className="project-card__img"
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
@@ -262,10 +294,76 @@ const Projects: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Project 04 — SentinelMail (matching CyberLens design) */}
+        <motion.div
+          className="projects__featured projects__featured--sentinelmail"
+          variants={featuredVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+        >
+          <div className="project-featured">
+            {/* accent line */}
+            <div className="project-featured__accent" />
+
+            {/* content row */}
+            <div className="project-featured__inner">
+              {/* text side */}
+              <div className="project-featured__text">
+                <span className="project-featured__badge">{sentinelProject.label}</span>
+
+                <div className="project-featured__number-row">
+                  <span className="project-featured__number">{sentinelProject.number}</span>
+                  <span className="project-featured__dash">—</span>
+                </div>
+
+                <h3 className="project-featured__title">{sentinelProject.title}</h3>
+                <p className="project-featured__tagline">{sentinelProject.tagline}</p>
+                <p className="project-featured__desc">{sentinelProject.description}</p>
+
+                <div className="project-featured__tech">
+                  {sentinelProject.technologies.map((t) => (
+                    <span className="project-featured__tech-pill" key={t}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  className="project-featured__cta"
+                  onClick={() => setSentinelMailCaseOpen(true)}
+                  aria-label="View SentinelMail case study"
+                >
+                  <span>View Case Study</span>
+                  <ArrowIcon />
+                </button>
+              </div>
+
+              {/* image container */}
+              <div className="project-featured__image">
+                <div className="project-featured__image-container">
+                  <img
+                    src={sentinelProject.image}
+                    alt={`${sentinelProject.title} — ${sentinelProject.tagline}`}
+                    className="project-featured__img"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </section>
 
       {/* CyberLens case study modal */}
       <CyberLensCase isOpen={caseStudyOpen} onClose={() => setCaseStudyOpen(false)} />
+
+      {/* SentinelMail case study modal */}
+      <SentinelMailCase
+        isOpen={sentinelMailCaseOpen}
+        onClose={() => setSentinelMailCaseOpen(false)}
+      />
     </>
   );
 };

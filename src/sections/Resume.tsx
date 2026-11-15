@@ -70,9 +70,8 @@ const Resume: React.FC = () => {
             ref={buttonRef}
             className="resume-cta-button"
             data-cursor="pointer"
-            /* Replace href with actual resume PDF path */
-            href="#"
-            download
+            href="/resume.pdf"
+            download="Rakesh_S_Resume.pdf"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             animate={{ x: magnetPos.x, y: magnetPos.y }}

@@ -16,39 +16,24 @@
 }
 
 .nav.scrolled {
-  background: rgba(23, 23, 23, 0.82);
+  background: rgba(23, 23, 23, 0.88);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   padding: 0.85rem 3rem;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 /* ── Logo ── */
 .navLogo {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.45rem;
   color: #F5F3EF;
   letter-spacing: 0.08em;
   text-decoration: none;
   cursor: pointer;
   position: relative;
   user-select: none;
-}
-
-.navLogo::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 28px;
-  height: 2px;
-  background: #A31C1B;
-  transition: width 0.3s ease;
-}
-
-.navLogo:hover::after {
-  width: 100%;
 }
 
 /* ── Desktop Links ── */

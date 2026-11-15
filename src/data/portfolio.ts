@@ -87,9 +87,9 @@ export const personalInfo = {
   heroDescription:
     'MCA (Cybersecurity) student with a passion for cybersecurity, IoT and technology. I build projects, explore new tools and keep learning every day.',
   interests: ['Cybersecurity', 'IoT', 'Technology', 'Problem Solving'],
-  email: 'placeholder@email.com', // PLACEHOLDER — replace with actual email
-  linkedin: '#', // PLACEHOLDER — replace with actual LinkedIn URL
-  github: '#', // PLACEHOLDER — replace with actual GitHub URL
+  email: 'itzrakesh003@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/rakeshh003/',
+  github: 'https://github.com/rakeshhraki',
 } as const;
 
 // ────────────────────────────────────────────────────────────
@@ -207,6 +207,25 @@ export const projects: Project[] = [
     ],
     category: 'IoT & Hardware',
     featured: false,
+  },
+  {
+    id: 'sentinelmail',
+    number: '04',
+    title: 'SentinelMail',
+    subtitle: 'Security Mailbox Triage & Incident Response Platform',
+    description:
+      'A full-stack security operations platform engineered for suspicious email triage and incident response. SentinelMail replaces ad-hoc inbox tracking with structured email intake, analyst triage queues, one-click incident escalation (INC-YYYY-NNNN), IOC extraction with confidence scoring, collaborative investigation notes, and multi-tier role-based access control.',
+    technologies: [
+      'React 19',
+      'Node.js',
+      'Express 5',
+      'MongoDB',
+      'JWT / RBAC',
+      'Tailwind CSS',
+      'Playwright',
+    ],
+    category: 'Cybersecurity',
+    featured: true,
   },
 ];
 
@@ -345,9 +364,9 @@ export const skillCategories: string[] = [
 // ────────────────────────────────────────────────────────────
 
 export const contactInfo = {
-  email: 'placeholder@email.com', // PLACEHOLDER — replace with actual email
-  linkedin: '#', // PLACEHOLDER — replace with actual LinkedIn URL
-  github: '#', // PLACEHOLDER — replace with actual GitHub URL
+  email: 'itzrakesh003@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/rakeshh003/',
+  github: 'https://github.com/rakeshhraki',
   location: 'Bengaluru, India',
   availability: 'Open to internships and entry-level opportunities',
 } as const;
@@ -372,8 +391,8 @@ export const footerData = {
   copyright: `© ${new Date().getFullYear()} Rakesh S. All rights reserved.`,
   tagline: 'Built with security in mind.',
   socialLinks: [
-    { label: 'GitHub', href: '#', icon: 'github' }, // PLACEHOLDER
-    { label: 'LinkedIn', href: '#', icon: 'linkedin' }, // PLACEHOLDER
-    { label: 'Email', href: 'mailto:placeholder@email.com', icon: 'mail' }, // PLACEHOLDER
+    { label: 'GitHub', href: 'https://github.com/rakeshhraki', icon: 'github' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rakeshh003/', icon: 'linkedin' },
+    { label: 'Email', href: 'mailto:itzrakesh003@gmail.com', icon: 'mail' },
   ],
 } as const;

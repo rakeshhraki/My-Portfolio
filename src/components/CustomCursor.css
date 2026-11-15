@@ -46,13 +46,13 @@
 }
 
 .custom-cursor-ring--pointer {
-  width: 52px;
-  height: 52px;
-  margin-top: -26px;
-  margin-left: -26px;
-  border-color: rgba(163, 28, 27, 0.75);
-  background-color: rgba(163, 28, 27, 0.06);
-  box-shadow: 0 0 15px rgba(163, 28, 27, 0.25);
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  margin-left: -22px;
+  border-color: rgba(163, 28, 27, 0.5);
+  background-color: rgba(163, 28, 27, 0.04);
+  box-shadow: 0 0 10px rgba(163, 28, 27, 0.15);
 }
 
 @media (pointer: coarse) {

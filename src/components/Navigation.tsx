@@ -147,9 +147,9 @@ const Navigation: React.FC = () => {
     <>
       <motion.nav
         className={`nav${isScrolled ? ' scrolled' : ''}`}
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -60, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+        transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay: 1.8 }}
       >
         {/* Logo */}
         <a

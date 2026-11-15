@@ -2,10 +2,6 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './Contact.css';
 
-/* ──────────────────────────────────────────────────────────
-   NOTE: Replace placeholder URLs and email below with
-   actual links before deploying.
-   ────────────────────────────────────────────────────────── */
 
 interface ContactLink {
   label: string;
@@ -81,21 +77,18 @@ const GitHubIcon: React.FC = () => (
 
 const contactLinks: ContactLink[] = [
   {
-    label: 'placeholder@email.com',
-    /* Replace with actual email address */
-    href: 'mailto:placeholder@email.com',
+    label: 'itzrakesh003@gmail.com',
+    href: 'mailto:itzrakesh003@gmail.com',
     icon: <EmailIcon />,
   },
   {
     label: 'LinkedIn Profile',
-    /* Replace with actual LinkedIn URL */
-    href: '#',
+    href: 'https://www.linkedin.com/in/rakeshh003/',
     icon: <LinkedInIcon />,
   },
   {
     label: 'GitHub Profile',
-    /* Replace with actual GitHub URL */
-    href: '#',
+    href: 'https://github.com/rakeshhraki',
     icon: <GitHubIcon />,
   },
 ];
